@@ -35,7 +35,6 @@ public class StudentMangController {
     @GetMapping("/allstudent")
     ResponseEntity<List<StudentModel>> findAllStudent(){
         List<StudentModel> studentDetail = service.findAllStudent();
-        //return ResponseEntity.status(200).body(studentDetail);
         //return ResponseEntity.ok(studentDetail);
         return new ResponseEntity<>(studentDetail,HttpStatus.OK);
     }
